@@ -322,6 +322,9 @@ header {
     top: 30px;
     overflow: auto;
 }
+.email{
+    font-size: 16px;
+}
 .list-menu {
     background: var(--side-menu-color);
     padding: 30px;
@@ -1035,8 +1038,9 @@ ul.slick-dots button {
     height: 146px;
     border-radius: 50%;
     font-size: 0;
-    animation: .4s ease-out reverse;
+    animation: .7s ease-out reverse;
     position: relative;
+    margin-top: 40px;
 }
 .progress-item::after {
     content: attr(data-value)'%';
