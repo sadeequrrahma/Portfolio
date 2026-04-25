@@ -66,6 +66,10 @@ $(document).ready(function () {
     const $sideMenu = $('.side-menu-main');
     const $hamburger = $('.hamburger');
 
+    if (!$sideMenu.length) {
+        return;
+    }
+
     $(document).on('click', '.menu-list-main li a', function (e) {
         const href = $(this).attr('href') || '';
         const isHashLink = href.startsWith('#');
@@ -82,7 +86,8 @@ $(document).ready(function () {
         $hamburger.removeClass('is-active');
     });
 
-    $menuToggle.on('click', function () {
+    $menuToggle.on('click', function (e) {
+        e.stopPropagation();
         $sideMenu.toggleClass('show');
         $hamburger.toggleClass('is-active', $sideMenu.hasClass('show'));
     });
