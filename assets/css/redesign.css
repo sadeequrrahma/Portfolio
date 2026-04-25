@@ -8,7 +8,18 @@
     --shadow-strong: 0 22px 55px rgba(24, 98, 255, 0.26);
 }
 
+/* Override template light tokens so text stays readable on dark UI */
 body {
+    --primary-color: rgba(88, 108, 190, 0.42);
+    --side-menu-color: #0c1022;
+    --section-background: rgba(22, 30, 52, 0.96);
+    --card-background: rgba(18, 26, 44, 0.96);
+    --icons-background: #1a243f;
+    --main-text: #f2f6ff;
+    --sub-text: #b9c5ec;
+    --btn-border: rgba(150, 170, 255, 0.45);
+    --icons-filter: brightness(0) saturate(100%) invert(93%) sepia(12%) saturate(520%) hue-rotate(185deg) brightness(102%) contrast(95%);
+    --icons-hover: brightness(0) saturate(100%) invert(100%);
     background:
         radial-gradient(1000px circle at 6% 9%, rgba(0, 179, 255, 0.2), transparent 38%),
         radial-gradient(900px circle at 90% 15%, rgba(47, 107, 255, 0.24), transparent 35%),
@@ -57,9 +68,9 @@ header {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(109, 94, 252, 0.1);
-    color: #3c36a2;
-    border: 1px solid rgba(109, 94, 252, 0.18);
+    background: rgba(47, 107, 255, 0.2);
+    color: #e8eeff;
+    border: 1px solid rgba(120, 160, 255, 0.35);
     padding: 8px 14px;
     border-radius: 999px;
     font-weight: 600;
@@ -72,7 +83,7 @@ header {
 }
 
 .visionary {
-    color: #b8c3ea;
+    color: #c9d4f5;
 }
 
 .creative.brand span,
@@ -151,8 +162,39 @@ header {
 }
 
 .cursus.university {
-    color: #9ab2ff;
+    color: #b4c4ff;
     font-weight: 600;
+}
+
+.education .description,
+.small_yellow_border_main .description {
+    color: #c5d0ef;
+    line-height: 1.65;
+}
+
+.rights-reserved h2,
+.rights-reserved a {
+    color: #aab8e8 !important;
+}
+
+.rights-reserved a:hover {
+    color: #ffffff !important;
+}
+
+.day-time {
+    color: #aab8e0 !important;
+}
+
+.call-us-contact {
+    color: #f0f4ff !important;
+}
+
+.call-num {
+    color: #dce4ff !important;
+}
+
+.skill-label {
+    color: #dce4ff !important;
 }
 
 #progress {
@@ -328,8 +370,21 @@ header {
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #6a7090;
+    color: #9aa8d8;
     margin-bottom: 12px;
+}
+
+.side-menu-ul li a {
+    color: #c5d0f0 !important;
+}
+
+.side-menu-ul li a.active {
+    background: linear-gradient(120deg, rgba(47, 107, 255, 0.95), rgba(0, 179, 255, 0.9)) !important;
+    color: #ffffff !important;
+}
+
+.side-menu-ul li a.active img {
+    filter: brightness(0) invert(1) !important;
 }
 
 .list-menu.bg-dark {
@@ -368,11 +423,15 @@ header {
 }
 
 .girl-name {
-    background: rgba(255, 255, 255, 0.82);
-    border: 1px solid rgba(112, 122, 173, 0.2);
+    background: rgba(12, 18, 38, 0.88);
+    border: 1px solid rgba(120, 150, 255, 0.35);
     border-radius: 14px;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+}
+
+.girl-name p {
+    color: #f2f6ff !important;
 }
 
 .section-two .row,
@@ -499,7 +558,7 @@ header {
 .footer-col p,
 .footer-col a,
 .footer-links li {
-    color: #b7c7ff;
+    color: #d0d9fb;
     font-size: 14px;
     line-height: 1.7;
 }
@@ -600,10 +659,11 @@ header {
 .highlight-card h4 {
     font-size: 20px;
     margin-bottom: 10px;
+    color: #f0f4ff;
 }
 
 .highlight-card p {
-    color: #b5c0e9;
+    color: #c9d4f5;
     line-height: 1.7;
 }
 
