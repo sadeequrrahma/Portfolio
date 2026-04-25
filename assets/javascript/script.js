@@ -1,9 +1,12 @@
 // Typing Text Js
 $(document).on('DOMContentLoaded', function () {
-    window.ityped.init(document.querySelector('.ityped'), {
-        strings: ['HI THERE!', 'I’M SADEEQ_UR_RAHMAN_', 'ASP.Net Core MVC Developer!'],
-        loop: true
-    });
+    const typedTarget = document.querySelector('.ityped');
+    if (typedTarget && window.ityped) {
+        window.ityped.init(typedTarget, {
+            strings: ['HI THERE!', 'I’M SADEEQ_UR_RAHMAN_', 'ASP.Net Core MVC Developer!'],
+            loop: true
+        });
+    }
 });
 /*------------------------------------- Whole Page Scrolling Animation -------------------------------------*/
 const observer = new IntersectionObserver((entries) => {
@@ -22,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
 (function ($) {
     $(window).on('load', function () {
         const svg = document.getElementById("loade-svg");
+        const preloader = document.querySelector(".preloader");
+        if (!svg || !preloader) return;
         const tl = gsap.timeline();
 
         const shapes = {
@@ -45,11 +50,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 attr: { d: shapes.end },
                 ease: "power1.easeOut"
             })
-            .to(".preloader", {
+            .to(preloader, {
                 y: -1000,
                 duration: 0.8
             })
-            .set(".preloader", {
+            .set(preloader, {
                 zIndex: -1,
                 display: "none"
             });
@@ -61,14 +66,16 @@ $(document).ready(function () {
     const $sideMenu = $('.side-menu-main');
     const $hamburger = $('.hamburger');
 
-    $(document).on('click', '.menu-list-main li', function (e) {
-        e.preventDefault();
+    $(document).on('click', '.menu-list-main li a', function (e) {
+        const href = $(this).attr('href') || '';
+        const isHashLink = href.startsWith('#');
 
-        const $link = $(this).find('a');
-        const targetId = $link.attr('href') ? $link.attr('href').substring(1) : null;
-
-        if (targetId && $('#' + targetId).length) {
-            $('#' + targetId)[0].scrollIntoView({ behavior: 'smooth' });
+        if (isHashLink) {
+            e.preventDefault();
+            const targetId = href.substring(1);
+            if (targetId && $('#' + targetId).length) {
+                $('#' + targetId)[0].scrollIntoView({ behavior: 'smooth' });
+            }
         }
 
         $sideMenu.removeClass('show');
@@ -209,7 +216,9 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }, observerOptions);
-    observer.observe(progressSection);
+    if (progressSection) {
+        observer.observe(progressSection);
+    }
 });
 
 /*------------------------------------- Bottom To Top Button -------------------------------------*/
