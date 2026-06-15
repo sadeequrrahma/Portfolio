@@ -631,11 +631,29 @@ header {
 
 .about-expertise,
 .services-process,
+.resume-projects,
+.resume-certifications,
 .resume-extra,
 .contact-extra {
     margin-top: 0;
     border-top: 0;
     border-radius: 0;
+}
+
+.resume-projects .highlight-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.resume-projects .project-stack {
+    font-size: 13px;
+    font-weight: 600;
+    color: #9fb4ff;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.resume-certifications {
+    margin-top: 24px;
 }
 
 .home-highlights {
@@ -697,6 +715,10 @@ header {
     }
 
     .highlight-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-projects .highlight-grid {
         grid-template-columns: 1fr;
     }
 
