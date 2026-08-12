@@ -3,7 +3,7 @@ $(document).on('DOMContentLoaded', function () {
     const typedTarget = document.querySelector('.ityped');
     if (typedTarget && window.ityped) {
         window.ityped.init(typedTarget, {
-            strings: ['HI THERE!', 'I’M SADEEQ_UR_RAHMAN_', 'ASP.Net Core MVC Developer!'],
+            strings: ['HI THERE!', 'I’M SADEEQ_UR_RAHMAN_', 'Software Engineer!'],
             loop: true
         });
     }
