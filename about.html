@@ -18,7 +18,7 @@
     <canvas id="canvas" width="1950" height="1080"></canvas>
     <canvas id="canvasbg" width="1950" height="1080"></canvas>
     <div class="site-containe">
-        <div class="container" id="mainHeader">
+        <div class="container-fluid site-width" id="mainHeader">
             <header>
                 <div class="header-brand">
                     <a href="index.html" class="brand-link">
@@ -58,11 +58,11 @@
         </aside>
 
         <div class="container-fluid page-shell">
-            <div class="container">
+            <div class="container-fluid site-width">
                 <main class="page-main">
                     <section class="section-two overflow-hidden" id="about">
-                        <div class="row">
-                            <div class="col-xxl-5 col-xl-5 col-lg-5 about-col">
+                        <div class="row g-4 align-items-start">
+                            <div class="col-12 col-lg-5 about-col">
                                 <h3 class="arya-stack-about fade_down"><span>I’m</span> SADEEQ UR RAHMAN</h3>
                                 <p class="WebExperts fade_down">Software Engineer</p>
                                 <div class="yer-exp-box-main">
@@ -71,7 +71,7 @@
                                     <div class="yer-exp-box counter fade_down"><p class="degit count" data-count="9">0</p><div><p>+</p><p>Projects Done</p></div></div>
                                 </div>
                             </div>
-                            <div class="col-xxl-7 col-xl-7 col-lg-7 self-taught-col">
+                            <div class="col-12 col-lg-7 self-taught-col">
                                 <h3 class="self-taught">Hello! <span>I’m SADEEQ UR RAHMAN</span>, a <span>Software Engineer</span> with 3+ years of professional experience specializing in C#, ASP.NET Core, REST APIs, SQL Server, EF Core, and Dapper.</h3>
                                 <h4 class="visionary">Experienced in building and maintaining production web applications, payment integrations, authentication systems, database solutions, and third-party integrations. Currently working as a Software Engineer/Team Lead, contributing to backend architecture, feature development, production issue resolution, and technical delivery.</h4>
                             </div>
@@ -79,31 +79,22 @@
                     </section>
                     <section class="section-three about-expertise">
                         <h3 class="creative brand fade_down">How I <span>Work</span></h3>
-                        <div class="highlight-grid">
-                            <article class="highlight-card fade_up">
-                                <h4>Requirement Analysis</h4>
-                                <p>I break down business requirements into practical modules and development milestones.</p>
-                            </article>
-                            <article class="highlight-card fade_up">
-                                <h4>Clean Implementation</h4>
-                                <p>I build maintainable backend architecture with performance and security in mind.</p>
-                            </article>
-                            <article class="highlight-card fade_up">
-                                <h4>Reliable Delivery</h4>
-                                <p>I deliver tested features and ensure smooth deployment with clear handover support.</p>
-                            </article>
+                        <div class="row g-3 g-lg-4 highlight-grid">
+                            <div class="col-12 col-md-6 col-lg-4"><article class="highlight-card fade_up h-100"><h4>Requirement Analysis</h4><p>I break down business requirements into practical modules and development milestones.</p></article></div>
+                            <div class="col-12 col-md-6 col-lg-4"><article class="highlight-card fade_up h-100"><h4>Clean Implementation</h4><p>I build maintainable backend architecture with performance and security in mind.</p></article></div>
+                            <div class="col-12 col-md-6 col-lg-4"><article class="highlight-card fade_up h-100"><h4>Reliable Delivery</h4><p>I deliver tested features and ensure smooth deployment with clear handover support.</p></article></div>
                         </div>
                     </section>
                 </main>
             </div>
 
             <footer class="full-width-footer site-footer">
-                <div class="container">
-                    <div class="footer-top-grid">
-                        <div class="footer-col"><h4>Sadeeq Ur Rahman</h4><p>Software Engineer with 3+ years of experience in ASP.NET Core, REST APIs, SQL Server, EF Core, and Dapper.</p></div>
-                        <div class="footer-col"><h5>Quick Links</h5><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="resume.html">Resume</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-                        <div class="footer-col"><h5>Core Skills</h5><ul class="footer-links"><li>ASP.NET Core MVC</li><li>Dapper & EF Core</li><li>SQL Server (SSMS)</li><li>React Frontend</li></ul></div>
-                        <div class="footer-col"><h5>Contact</h5><p><a href="tel:+923326123452">+92 332 6123452</a></p><p><a href="mailto:sadeequrrahman421@gmail.com">sadeequrrahman421@gmail.com</a></p><p>Charsadda, Pakistan</p><div class="media-main"><a href="https://www.facebook.com/" class="media-icons"><img src="assets/images/svg/facebook.svg" alt="facebook"></a><a href="https://www.instagram.com/" class="media-icons"><img src="assets/images/svg/insta.svg" alt="insta"></a><a href="https://www.linkedin.com/in/sadeeq-ur-rahman-60663124a/" class="media-icons"><img src="assets/images/svg/linkdin.svg" alt="linkedin"></a></div></div>
+                <div class="container-fluid site-width">
+                    <div class="row g-3 footer-top-grid">
+                        <div class="col-12 col-md-6 col-xl-3"><div class="footer-col"><h4>Sadeeq Ur Rahman</h4><p>Software Engineer with 3+ years of experience in ASP.NET Core, REST APIs, SQL Server, EF Core, and Dapper.</p></div></div>
+                        <div class="col-12 col-md-6 col-xl-3"><div class="footer-col"><h5>Quick Links</h5><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="resume.html">Resume</a></li><li><a href="contact.html">Contact</a></li></ul></div></div>
+                        <div class="col-12 col-md-6 col-xl-3"><div class="footer-col"><h5>Core Skills</h5><ul class="footer-links"><li>ASP.NET Core MVC</li><li>Dapper & EF Core</li><li>SQL Server (SSMS)</li><li>React Frontend</li></ul></div></div>
+                        <div class="col-12 col-md-6 col-xl-3"><div class="footer-col"><h5>Contact</h5><p><a href="tel:+923326123452">+92 332 6123452</a></p><p><a href="mailto:sadeequrrahman421@gmail.com">sadeequrrahman421@gmail.com</a></p><p>Charsadda, Pakistan</p><div class="media-main"><a href="https://www.facebook.com/" class="media-icons"><img src="assets/images/svg/facebook.svg" alt="facebook"></a><a href="https://www.instagram.com/" class="media-icons"><img src="assets/images/svg/insta.svg" alt="insta"></a><a href="https://www.linkedin.com/in/sadeeq-ur-rahman-60663124a/" class="media-icons"><img src="assets/images/svg/linkdin.svg" alt="linkedin"></a></div></div></div>
                     </div>
                     <div class="rights-reserved">
                         <h2><a>Sadeeq Ur Rahman | Software Engineer</a></h2>

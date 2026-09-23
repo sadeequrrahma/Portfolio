@@ -1,12 +1,16 @@
-@media (min-width: 1650px) {
-    .container,
-    .container-lg,
-    .container-md,
-    .container-sm,
-    .container-xl,
-    .container-xxl {
-        max-width: 1290px !important;
-    }
+/* Full-width fluid containers on every screen size */
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl,
+.container-fluid.site-width,
+.site-width {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: clamp(14px, 3vw, 48px) !important;
+    padding-right: clamp(14px, 3vw, 48px) !important;
 }
 @media (max-width: 1399px) {
     .list-menu {
@@ -38,9 +42,11 @@
 }
 @media (max-width: 1199px) {
     #mainHeader {
-        position: sticky;
-        top: 30px;
-        z-index: 500;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
     }
     .list-menu {
         margin-bottom: 0;
@@ -201,11 +207,14 @@
         position: relative;
     }
     header {
-        margin: 20px 0;
+        margin: 0;
     }
     #mainHeader {
-        position: sticky;
-        top: 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
     }
     .arya-stack-about {
         font-size: 40px;
@@ -293,7 +302,7 @@
         padding: 20px;
         max-width: 100%;
     }
-    .contact-box-grid {
+    .contact-box-grid:not(.row) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
@@ -465,7 +474,7 @@
         padding: 10px 0 10px 0;
         font-size: 19px;
     }
-    .contact-box-grid {
+    .contact-box-grid:not(.row) {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
