@@ -350,7 +350,13 @@
         display: none;
     }
     .logo {
-        width: 200px;
+        width: 52px;
+        height: 52px;
+    }
+    .brand-link .logo {
+        width: 52px !important;
+        height: 52px !important;
+        max-width: 52px;
     }
     header {
         padding: 10px 15px;

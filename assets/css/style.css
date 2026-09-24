@@ -147,7 +147,7 @@ canvas {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent;
+    background: #03050c;
     overflow: hidden;
     z-index: 99999;
 }
@@ -156,7 +156,7 @@ canvas {
     top: 0;
     height: 110vh;
     width: 100vw;
-    fill: var(--primary-color);
+    fill: #03050c;
 }
 .preloader .loading {
     font-size: 30px;
@@ -282,7 +282,7 @@ header {
     display: none;
 }
 .logo {
-    filter: var(--icons-filter);
+    filter: none;
 }
 .aryaBtn img {
     filter: var(--icons-filter);
