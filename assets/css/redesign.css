@@ -76,6 +76,95 @@ header {
     font-weight: 600;
 }
 
+.hi-there svg {
+    width: 22px;
+    height: 22px;
+}
+
+.wave-hand {
+    transform-origin: 70% 85%;
+    animation: wave-hand 1.8s ease-in-out infinite;
+}
+
+@keyframes wave-hand {
+    0%, 55%, 100% { transform: rotate(0deg); }
+    10% { transform: rotate(18deg); }
+    20% { transform: rotate(-10deg); }
+    30% { transform: rotate(16deg); }
+    40% { transform: rotate(-6deg); }
+}
+
+.hero-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin: 22px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hero-facts li {
+    color: #c5d2f5;
+    font-size: 14px;
+}
+
+.hero-facts strong {
+    color: #fff;
+    font-size: 16px;
+}
+
+.hero-brands {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 22px 0 8px;
+    padding: 0;
+    list-style: none;
+}
+
+.hero-brands li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(120, 160, 255, 0.32);
+    background: rgba(13, 20, 40, 0.72);
+    color: #e4ebff;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.hero-brands svg {
+    width: 16px;
+    height: 16px;
+    color: #7eb6ff;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.footer-brand img {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+.footer-brand h4 {
+    margin: 0;
+}
+
+.footer-role {
+    margin: 0;
+    color: #9fb0e4;
+    font-size: 13px;
+}
+
 .arya-stack-about {
     font-size: clamp(32px, 4vw, 56px);
     line-height: 1.08;
@@ -129,6 +218,99 @@ header {
     border-radius: 16px !important;
     border: 1px solid rgba(109, 94, 252, 0.14);
     box-shadow: 0 8px 25px rgba(18, 20, 35, 0.05);
+}
+
+.about-kicker {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #8fa0d4;
+}
+
+.about-col .arya-stack-about {
+    max-width: none;
+    font-size: clamp(34px, 3vw, 48px);
+    line-height: 1.08;
+}
+
+.about-col .WebExperts {
+    padding-top: 8px;
+}
+
+.about-col .yer-exp-box-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 28px;
+    max-width: 440px;
+}
+
+.about-col .yer-exp-box {
+    max-width: none;
+    padding: 14px 16px;
+}
+
+.about-col .yer-exp-box .degit {
+    font-size: 36px;
+    line-height: 1;
+}
+
+.about-intro .self-taught-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-intro .self-taught {
+    font-size: 22px;
+    line-height: 1.45;
+    color: #e8eeff;
+    padding-bottom: 12px;
+}
+
+.about-intro .visionary {
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.about-fill {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 14px;
+    margin-top: 0;
+    flex: 1;
+}
+
+.about-fill article {
+    height: 100%;
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid rgba(98, 130, 228, 0.32);
+    background: rgba(13, 20, 40, 0.8);
+}
+
+.about-fill h4 {
+    margin: 0 0 8px;
+    color: #f0f4ff;
+    font-size: 16px;
+}
+
+.about-fill p {
+    margin: 0;
+    color: #c9d4f5;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+@media (max-width: 575px) {
+    .about-fill,
+    .about-col .yer-exp-box-main {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+    }
 }
 
 .services-box,
@@ -535,6 +717,177 @@ header {
     min-height: 72vh;
     display: flex;
     align-items: center;
+}
+
+.home-hero .section-one-row {
+    justify-content: space-between;
+}
+
+.home-hero .portfolio-girl-img-col {
+    justify-content: flex-end;
+    margin-left: auto;
+    padding-left: 0;
+}
+
+.home-hero .hero-portrait {
+    margin-left: auto;
+}
+
+.home-hero .girl-name {
+    left: 28px;
+    right: auto;
+    bottom: 52px;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    max-width: calc(100% - 40px);
+    height: auto;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+}
+
+.home-hero .girl-name p {
+    display: inline;
+    margin: 0;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+}
+
+.home-hero .ityped-cursor {
+    display: inline;
+    position: static;
+    margin-left: 2px;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1;
+    animation: ityped-blink 0.8s step-end infinite;
+}
+
+@keyframes ityped-blink {
+    50% { opacity: 0; }
+}
+
+.hero-copy {
+    max-width: 560px;
+}
+
+.hero-name {
+    margin: 16px 0 0;
+    color: #9eb4ff;
+    font-size: 15px;
+    font-weight: 650;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.home-hero .arya-stack-about {
+    max-width: none;
+    margin: 6px 0 12px;
+}
+
+.hero-lead {
+    max-width: 460px;
+    font-size: 17px;
+    line-height: 1.65;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.hero-link {
+    color: #d7e4ff;
+    font-weight: 650;
+    border-bottom: 1px solid rgba(140, 170, 255, 0.55);
+    padding-bottom: 2px;
+}
+
+.hero-link:hover {
+    color: #fff;
+}
+
+.hero-portrait {
+    position: relative;
+    width: min(100%, 420px);
+    padding: 18px;
+    border-radius: 32px;
+    background:
+        radial-gradient(120px circle at 20% 15%, rgba(0, 179, 255, 0.28), transparent 60%),
+        radial-gradient(140px circle at 80% 85%, rgba(47, 107, 255, 0.35), transparent 62%),
+        rgba(12, 18, 38, 0.55);
+    border: 1px solid rgba(140, 170, 255, 0.35);
+    box-shadow: 0 24px 60px rgba(8, 16, 40, 0.45);
+}
+
+.home-hero .portfolio-girl-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+    border: 0;
+    box-shadow: none;
+}
+
+.hero-chip {
+    position: absolute;
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 10px 14px;
+    border-radius: 14px;
+    background: rgba(8, 12, 28, 0.9);
+    border: 1px solid rgba(140, 170, 255, 0.4);
+    color: #d7e4ff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hero-chip strong {
+    color: #fff;
+    font-size: 18px;
+}
+
+.hero-chip-top {
+    top: 28px;
+    left: -8px;
+}
+
+.hero-chip-bottom {
+    right: -6px;
+    bottom: 78px;
+}
+
+@media (max-width: 991px) {
+    .home-hero .portfolio-girl-img-col {
+        margin-left: 0;
+        justify-content: center;
+        margin-top: 28px;
+    }
+
+    .hero-chip-top,
+    .hero-chip-bottom {
+        left: 12px;
+        right: auto;
+    }
+
+    .hero-chip-bottom {
+        bottom: 16px;
+    }
 }
 
 .portfolio-girl-img {
@@ -1032,9 +1385,66 @@ header {
     margin-bottom: 8px;
 }
 
+.contact-layout .visionary {
+    max-width: none;
+    min-height: 56px;
+}
+
+.contact-panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 28px;
+    border-radius: 18px;
+    border: 1px solid rgba(101, 129, 214, 0.32);
+    background: rgba(15, 22, 43, 0.78);
+}
+
+.contact-panel .creative {
+    font-size: 34px;
+    line-height: 1.2;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+.contact-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 22px;
+    flex: 1;
+}
+
+.contact-stack .contact-sec-box {
+    margin: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 118px;
+    border-radius: 16px !important;
+}
+
+.contact-stack .call-num {
+    display: inline-block;
+    overflow-wrap: anywhere;
+}
+
 .contact-form {
-    max-width: 760px;
-    margin-top: 28px;
+    max-width: none;
+    margin-top: 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form .row {
+    flex: 1;
+}
+
+.contact-form .form-textarea {
+    flex: 1;
+    min-height: 160px;
 }
 
 .contact-form .form-field {

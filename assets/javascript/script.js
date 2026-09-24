@@ -3,8 +3,12 @@ $(document).on('DOMContentLoaded', function () {
     const typedTarget = document.querySelector('.ityped');
     if (typedTarget && window.ityped) {
         window.ityped.init(typedTarget, {
-            strings: ['Software Engineer'],
-            loop: false
+            strings: ['Software Engineer', '.NET Developer', 'Backend Engineer', 'ASP.NET Developer', 'C# Developer', 'Team Lead', 'API Developer'],
+            loop: true,
+            typeSpeed: 90,
+            backSpeed: 50,
+            startDelay: 400,
+            backDelay: 1400
         });
     }
 });
@@ -101,9 +105,10 @@ $(document).ready(function () {
 
 /*------------------------------------- Scroll counter -------------------------------------*/
 var counted = 0;
-$(window).on('scroll', function () {
+function runAboutCounters() {
+    if (!$('.counter').length || counted !== 0) return;
     var oTop = $('.counter').offset()?.top - window.innerHeight;
-    if (counted === 0 && $(window).scrollTop() > oTop) {
+    if ($(window).scrollTop() > oTop) {
         $('.count').each(function () {
             var $this = $(this),
                 countTo = $this.attr('data-count');
@@ -125,7 +130,9 @@ $(window).on('scroll', function () {
         });
         counted = 1;
     }
-});
+}
+$(window).on('scroll', runAboutCounters);
+$(runAboutCounters);
 
 /*------------------------------------- Tabs -------------------------------------*/
 $(function () {
