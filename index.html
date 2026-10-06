@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sadeeq Ur Rahman | Software Engineer</title>
-    <meta name="description" content="Sadeeq Ur Rahman is a software engineer in Peshawar, Pakistan. He builds production web apps with C#, ASP.NET Core, REST APIs, SQL Server, EF Core, and Dapper.">
+    <title>Sadeeq Ur Rahman | Software Engineer / Team Lead</title>
+    <meta name="description" content="Sadeeq Ur Rahman is a software engineer and team lead in Peshawar. He builds production web applications with ASP.NET Core, React, SQL Server, EF Core, Dapper, and Stripe.">
     <meta name="theme-color" content="#03050c">
     <link rel="canonical" href="https://sadeequrrahma.github.io/Portfolio/">
-    <meta property="og:title" content="Sadeeq Ur Rahman | Software Engineer">
-    <meta property="og:description" content="Production web systems with ASP.NET Core, SQL Server, EF Core, and Dapper.">
+    <meta property="og:title" content="Sadeeq Ur Rahman | Software Engineer / Team Lead">
+    <meta property="og:description" content="Production web applications with ASP.NET Core, React, SQL Server, EF Core, Dapper, and Stripe.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sadeequrrahma.github.io/Portfolio/">
     <meta property="og:image" content="https://sadeequrrahma.github.io/Portfolio/assets/images/svg/logo-icon.png">
@@ -50,23 +50,24 @@
         <div class="container-fluid site-width" id="mainHeader">
             <header>
                 <div class="header-brand">
-                    <a href="index.html" class="brand-link">
+                    <a href="#home" class="brand-link">
                         <img class="logo" src="assets/images/svg/logo-icon.png" alt="logo">
                         <div class="brand-text">
                             <p class="brand-name">Sadeeq Ur Rahman</p>
-                            <p class="brand-role">Software Engineer</p>
+                            <p class="brand-role">Engineer / Team Lead</p>
                         </div>
                     </a>
                 </div>
-                <nav class="desktop-nav">
-                    <a href="index.html" class="active">Home</a>
-                    <a href="about.html">About</a>
-                    <a href="services.html">Services</a>
-                    <a href="resume.html">Resume</a>
-                    <a href="contact.html">Contact</a>
+                <nav class="desktop-nav" aria-label="Section navigation">
+                    <a href="#home" class="active">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#work">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#resume">Resume</a>
+                    <a href="#contact">Contact</a>
                 </nav>
                 <div class="aryaBtn-toggle-main mt-0">
-                    <a href="contact.html" class="aryaBtn hire-me-btn">
+                    <a href="#contact" class="aryaBtn hire-me-btn">
                         Let's Work <img src="assets/images/svg/hireMe-svg.svg" alt="hireMe-svg">
                     </a>
                     <button id="menu-toggle" class="menu-toggle-button" aria-label="Open menu">
@@ -83,11 +84,12 @@
             <div class="list-menu menu-list-main bg-dark">
                 <p class="panel-title">Navigation</p>
                 <ul class="side-menu-ul">
-                    <li><a href="index.html" class="active">HOME<img src="assets/images/svg/home.svg" alt="home"></a></li>
-                    <li><a href="about.html">ABOUT ME<img src="assets/images/svg/about.svg" alt="about"></a></li>
-                    <li><a href="services.html">SERVICES<img src="assets/images/svg/services.svg" alt="services"></a></li>
-                    <li><a href="resume.html">RESUME<img src="assets/images/svg/resume.svg" alt="resume"></a></li>
-                    <li><a href="contact.html">CONTACT<img src="assets/images/svg/contact.svg" alt="contact"></a></li>
+                    <li><a href="#home" class="active">HOME<img src="assets/images/svg/home.svg" alt="home"></a></li>
+                    <li><a href="#about">ABOUT<img src="assets/images/svg/about.svg" alt="about"></a></li>
+                    <li><a href="#work">PROJECTS<img src="assets/images/svg/portfolio.svg" alt="projects"></a></li>
+                    <li><a href="#experience">EXPERIENCE<img src="assets/images/svg/resume.svg" alt="experience"></a></li>
+                    <li><a href="#resume">RESUME<img src="assets/images/svg/resume.svg" alt="resume"></a></li>
+                    <li><a href="#contact">CONTACT<img src="assets/images/svg/contact.svg" alt="contact"></a></li>
                 </ul>
             </div>
         </aside>
@@ -96,111 +98,445 @@
                 <section class="section-one home-hero" id="home">
                     <div class="container-fluid site-width">
                         <div class="row section-one-row align-items-center">
-                            <div class="col-12 col-lg-5 hero-copy">
-                                <p class="hi-there fade_down">Hi there <svg class="wave-hand" viewBox="0 0 24 24" aria-hidden="true"><path fill="#F3C7A1" d="M7.2 10.8V6.4a1.35 1.35 0 0 1 2.7 0v3.7h.15V5.2a1.35 1.35 0 0 1 2.7 0v4.9h.15V6.8a1.35 1.35 0 1 1 2.7 0v5.6c0 3-2 5.2-5 5.2-1.7 0-2.9-.7-3.7-1.8l-2.6-3.4a1.3 1.3 0 0 1 2-1.65l.9.7Z"/></svg></p>
+                            <div class="col-12 col-lg-7 hero-copy">
+                                <p class="hi-there fade_down">Open to remote, onsite, and project work</p>
                                 <p class="hero-name fade_down">Sadeeq Ur Rahman</p>
-                                <h2 class="arya-stack-about">Software Engineer</h2>
-                                <p class="visionary hero-lead fade_down">I design and ship production web systems: APIs, payments, authentication, and SQL Server databases. Open for remote, onsite, and project work from Peshawar.</p>
-                                <ul class="hero-brands" aria-label="Core technologies">
-                                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 3 7v10l9 5 9-5V7l-9-5Zm0 2.2 6.2 3.4L12 11 5.8 7.6 12 4.2ZM5 9.3l6 3.3v6.8l-6-3.3V9.3Zm8 10.1v-6.8l6-3.3v6.8l-6 3.3Z"/></svg> C#</li>
-                                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 5h7v7H4V5Zm9 0h7v7h-7V5ZM4 14h7v5H4v-5Zm9 0h7v5h-7v-5Z"/></svg> .NET</li>
-                                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 5h16v3H4V5Zm0 5h10v3H4v-3Zm0 5h16v4H4v-4Z"/></svg> SQL Server</li>
-                                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3.2 14.2 8h5.3l-4.3 3.2 1.6 5.1L12 13.2 7.2 16.3 8.8 11.2 4.5 8h5.3L12 3.2Z"/></svg> Stripe</li>
-                                    <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a1.6 1.6 0 0 1 .4 3.1c.5.2.9.5 1.3.9l2.2-1.3a1.6 1.6 0 1 1 1.6 2.8l-2.2 1.3c.2.5.3 1 .3 1.6s-.1 1.1-.3 1.6l2.2 1.3a1.6 1.6 0 1 1-1.6 2.8l-2.2-1.3c-.4.4-.8.7-1.3.9A1.6 1.6 0 1 1 10.4 19c-.5-.2-.9-.5-1.3-.9l-2.2 1.3a1.6 1.6 0 1 1-1.6-2.8l2.2-1.3A5.4 5.4 0 0 1 7.2 14c0-.6.1-1.1.3-1.6L5.3 11.1a1.6 1.6 0 1 1 1.6-2.8l2.2 1.3c.4-.4.8-.7 1.3-.9A1.6 1.6 0 0 1 12 2Z"/></svg> React</li>
-                                </ul>
+                                <h1 class="arya-stack-about">Software Engineer / Team Lead</h1>
+                                <p class="visionary hero-lead fade_down">Building scalable web applications with <strong>ASP.NET Core, React, SQL Server, and modern backend architecture.</strong></p>
+                                <p class="visionary hero-sub fade_down">3+ years of experience building production web applications, REST APIs, payment integrations, authentication systems, database solutions, and third-party integrations.</p>
                                 <div class="hero-actions">
-                                    <a href="assets/pdf/SADEEQ_UR_RAHMAN_CV.pdf" class="aryaBtn" target="_blank">
+                                    <a href="assets/pdf/SADEEQ_UR_RAHMAN_CV.pdf" class="aryaBtn" target="_blank" rel="noopener">
                                         Download CV <img src="assets/images/svg/download-svg.svg" alt="">
                                     </a>
-                                    <a href="contact.html" class="hero-link">Let's work</a>
+                                    <a href="#contact" class="hero-link">Contact Me</a>
+                                </div>
+                                <div class="hero-social">
+                                    <a href="https://github.com/sadeequrrahma" target="_blank" rel="noopener">GitHub</a>
+                                    <a href="https://www.linkedin.com/in/sadeeq-ur-rahman-60663124a/" target="_blank" rel="noopener">LinkedIn</a>
                                 </div>
                                 <ul class="hero-facts">
                                     <li><strong>3+</strong> years</li>
-                                    <li><strong>5+</strong> roles</li>
-                                    <li><strong>50+</strong> hours / week</li>
-                                    <li><strong>10+</strong> projects</li>
+                                    <li><strong>Team</strong> lead</li>
+                                    <li><strong>10+</strong> systems</li>
+                                    <li><strong>Peshawar</strong></li>
                                 </ul>
                             </div>
-                            <div class="col-12 col-lg-5 portfolio-girl-img-col">
+                            <div class="col-12 col-lg-5 portrait-col">
                                 <div class="hero-portrait zoom_in">
-                                    <img class="portfolio-girl-img" src="assets/images/home-images/3.png" alt="Sadeeq Ur Rahman">
-                                    <div class="girl-name">
-                                        <p class="ityped"></p>
-                                    </div>
+                                    <img class="portrait-photo" src="assets/images/home-images/3.png" alt="Portrait of Sadeeq Ur Rahman, software engineer">
+                                    <div class="portrait-caption"><p>Peshawar, Pakistan</p></div>
                                     <p class="hero-chip hero-chip-top"><strong>3+</strong> years</p>
-                                    <p class="hero-chip hero-chip-bottom"><strong>10+</strong> projects</p>
+                                    <p class="hero-chip hero-chip-bottom"><strong>10+</strong> systems</p>
                                 </div>
                             </div>
                         </div>
+                        <div class="now-strip fade_up">
+                            <p>Currently working with</p>
+                            <ul aria-label="Current technologies">
+                                <li>.NET</li>
+                                <li>ASP.NET Core</li>
+                                <li>React</li>
+                                <li>SQL Server</li>
+                                <li>EF Core</li>
+                                <li>Dapper</li>
+                                <li>Stripe</li>
+                                <li>Google Pay</li>
+                                <li>Apple Pay</li>
+                                <li>Azure Blob</li>
+                                <li>SignalR</li>
+                                <li>JWT</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
-                <section class="section-three home-highlights">
+                <section class="section-two home-about" id="about">
                     <div class="container-fluid site-width">
-                        <h3 class="creative brand fade_down">Professional <span>Highlights</span></h3>
-                        <div class="row g-3 g-lg-4 highlight-grid">
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <article class="highlight-card fade_up h-100">
-                                    <h4>Backend Engineering</h4>
-                                    <p>Production-ready web systems with ASP.NET Core MVC, EF Core, Dapper, and SQL Server.</p>
-                                </article>
+                        <div class="row g-4 align-items-stretch about-intro">
+                            <div class="col-12 col-lg-5 about-col">
+                                <p class="about-kicker fade_down">About</p>
+                                <h2 class="arya-stack-about fade_down">Sadeeq Ur Rahman</h2>
+                                <p class="WebExperts fade_down">Software Engineer / Team Lead</p>
+                                <div class="yer-exp-box-main">
+                                    <div class="yer-exp-box counter fade_down"><p class="degit count" data-count="3">0</p><div><p>+</p><p>Years</p></div></div>
+                                    <div class="yer-exp-box counter fade_down"><p class="degit count" data-count="6">0</p><div><p></p><p>Roles</p></div></div>
+                                    <div class="yer-exp-box counter fade_down"><p class="degit count" data-count="10">0</p><div><p>+</p><p>Systems</p></div></div>
+                                </div>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <article class="highlight-card fade_up h-100">
-                                    <h4>API to UI</h4>
-                                    <p>End-to-end features, including the EduPortal React and TypeScript frontend on an ASP.NET Core API.</p>
-                                </article>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <article class="highlight-card fade_up h-100">
-                                    <h4>Performance Focus</h4>
-                                    <p>System optimization, database tuning, and migration work for scalable enterprise applications.</p>
-                                </article>
+                            <div class="col-12 col-lg-7 self-taught-col">
+                                <h3 class="self-taught">I design and deliver production systems in <span>C# and ASP.NET Core</span>, from API design through SQL Server and release.</h3>
+                                <h4 class="visionary">Software engineer and team lead on SMBP at SMC Tech. I own backend delivery: REST APIs, payments, Azure Blob Storage, SignalR, SQL Server, and production support.</h4>
+                                <div class="about-fill">
+                                    <article>
+                                        <h3>Current engagement</h3>
+                                        <p>Membership platform backend: subscriptions, Stripe, Google Pay, and Apple Pay, Google, Apple, and LinkedIn sign-in, Azure Blob Storage, SignalR, and SQL Server.</p>
+                                    </article>
+                                    <article>
+                                        <h3>How I work</h3>
+                                        <p>Controllers stay thin. Business rules live in services. Data access goes through EF Core or Dapper, chosen for the feature.</p>
+                                    </article>
+                                    <article>
+                                        <h3>Handover</h3>
+                                        <p>Tested modules, a documented data model, and code the next developer can extend.</p>
+                                    </article>
+                                    <article>
+                                        <h3>Availability</h3>
+                                        <p>Remote, onsite, and project-based. Based in Peshawar, Pakistan.</p>
+                                    </article>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <section class="section-three home-projects" id="work">
                     <div class="container-fluid site-width">
-                        <h3 class="creative brand fade_down">Selected <span>Work</span></h3>
+                        <p class="about-kicker">Proof of work</p>
+                        <h2 class="creative brand fade_down">Featured <span>Projects</span></h2>
+                        <p class="visionary section-lead">Production systems I designed, built, and maintained. Client work is private, so each card shows the problem, my contribution, and the stack.</p>
                         <div class="row g-3 g-lg-4">
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <article class="project-card fade_up h-100">
-                                    <h4>EduPortal</h4>
-                                    <p class="project-stack">React 18, TypeScript, ASP.NET Core, EF Core, SQL Server, JWT</p>
-                                    <p class="project-role">Full-stack</p>
-                                    <p>Multi-tenant school portal: org hierarchy, attendance, registration, role-based admin, guardian views, and a CMS homepage.</p>
+                            <div class="col-12 col-lg-4">
+                                <article class="project-card fade_up h-100" id="smbp">
+                                    <div class="project-top">
+                                        <h3>SMBP</h3>
+                                        <span class="project-badge">Current</span>
+                                    </div>
+                                    <p class="project-role">Support Muslim Business Platform · Backend, Team Lead · SMC Tech</p>
+                                    <p>Developed and maintained the membership platform backend: subscriptions, payments, sign-in, file storage, real-time updates, and SQL Server.</p>
+                                    <ul class="project-points">
+                                        <li>Implemented Stripe subscriptions and refunds, plus Google Pay and Apple Pay, with the SQL Server records those payments depend on.</li>
+                                        <li>Added Google, Apple, and LinkedIn sign-in alongside the platform authentication.</li>
+                                        <li>Used Azure Blob Storage for files and SignalR for real-time updates.</li>
+                                        <li>Built ASP.NET Core services and stored procedures, and lead delivery on the production system.</li>
+                                    </ul>
+                                    <ul class="skill-chips" aria-label="SMBP technologies">
+                                        <li>ASP.NET Core</li>
+                                        <li>SQL Server</li>
+                                        <li>Stripe</li>
+                                        <li>Google Pay</li>
+                                        <li>Apple Pay</li>
+                                        <li>Azure Blob Storage</li>
+                                        <li>SignalR</li>
+                                        <li>Google</li>
+                                        <li>Apple</li>
+                                        <li>LinkedIn</li>
+                                    </ul>
+                                    <div class="project-actions">
+                                        <span class="project-private">Private Project</span>
+                                        <a href="#smbp" class="hero-link">Details</a>
+                                    </div>
                                 </article>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <article class="project-card fade_up h-100">
-                                    <h4>SMBP</h4>
-                                    <p class="project-stack">ASP.NET Core, REST APIs, SQL Server, Stripe</p>
-                                    <p class="project-role">Backend, current role</p>
-                                    <p>Support Muslim Business Platform. Backend services, subscriptions, refunds, and SQL Server stored procedures.</p>
+                            <div class="col-12 col-lg-4">
+                                <article class="project-card fade_up h-100" id="eduportal">
+                                    <div class="project-top">
+                                        <h3>EduPortal</h3>
+                                        <span class="project-badge">Full-stack</span>
+                                    </div>
+                                    <p class="project-role">Education management system · API and React</p>
+                                    <p>Built a multi-tenant school portal: organization hierarchy, attendance, registration, admin tools, guardian views, and a CMS homepage.</p>
+                                    <ul class="project-points">
+                                        <li>Implemented JWT authentication with role-based access for admin, staff, and guardian views.</li>
+                                        <li>Delivered React and TypeScript screens on an ASP.NET Core Web API with EF Core and SQL Server.</li>
+                                        <li>Modeled tenant hierarchy so one deployment serves multiple organizations.</li>
+                                    </ul>
+                                    <ul class="skill-chips" aria-label="EduPortal technologies">
+                                        <li>React 18</li>
+                                        <li>TypeScript</li>
+                                        <li>ASP.NET Core</li>
+                                        <li>EF Core</li>
+                                        <li>SQL Server</li>
+                                        <li>JWT</li>
+                                    </ul>
+                                    <div class="project-actions">
+                                        <span class="project-private">Private Project</span>
+                                        <a href="#eduportal" class="hero-link">Details</a>
+                                    </div>
                                 </article>
                             </div>
-                            <div class="col-12 col-md-6 col-lg-4">
-                                <article class="project-card fade_up h-100">
-                                    <h4>Clothing Inventory</h4>
-                                    <p class="project-stack">ASP.NET Core MVC, Dapper, SQL Server</p>
-                                    <p class="project-role">Backend</p>
-                                    <p>Suppliers, stock, POS, purchases, sales, and reporting in one inventory system.</p>
+                            <div class="col-12 col-lg-4">
+                                <article class="project-card fade_up h-100" id="inventory">
+                                    <div class="project-top">
+                                        <h3>Clothing Inventory</h3>
+                                        <span class="project-badge">Backend</span>
+                                    </div>
+                                    <p class="project-role">Inventory, POS, and reporting · ASP.NET Core MVC</p>
+                                    <p>Built the data and application layer for suppliers, stock, point of sale, purchases, sales, and reporting in one system.</p>
+                                    <ul class="project-points">
+                                        <li>Designed SQL Server access with Dapper for stock, purchase, sales, and report workflows.</li>
+                                        <li>Kept purchasing, inventory, and POS in separate modules so each could change without a rewrite.</li>
+                                        <li>Added reporting on top of the same data model used by day-to-day operations.</li>
+                                    </ul>
+                                    <ul class="skill-chips" aria-label="Inventory technologies">
+                                        <li>ASP.NET Core MVC</li>
+                                        <li>Dapper</li>
+                                        <li>SQL Server</li>
+                                        <li>C#</li>
+                                    </ul>
+                                    <div class="project-actions">
+                                        <span class="project-private">Private Project</span>
+                                        <a href="#inventory" class="hero-link">Details</a>
+                                    </div>
                                 </article>
                             </div>
                         </div>
-                        <div class="download-btn" style="margin-top: 22px;">
-                            <a href="resume.html#projects" class="aryaBtn">All Projects <img src="assets/images/svg/right-arrow.svg" alt=""></a>
+                        <div class="download-btn">
+                            <a href="#more-work" class="aryaBtn">More Systems <img src="assets/images/svg/right-arrow.svg" alt=""></a>
                         </div>
                     </div>
                 </section>
-                <section class="section-two home-cta-section">
+                <section class="section-three home-experience" id="experience">
                     <div class="container-fluid site-width">
-                        <div class="home-cta-box">
-                            <div>
-                                <h3 class="creative brand">Need a reliable <span>.NET developer?</span></h3>
-                                <p class="visionary">Available for remote, onsite, and project-based collaborations for web applications and backend systems.</p>
+                        <p class="about-kicker">Experience</p>
+                        <h2 class="creative brand fade_down">Where I have <span>shipped</span></h2>
+                        <p class="visionary section-lead">A recruiter can read this without downloading the CV. Education and certifications are in the resume section.</p>
+                        <div class="role-list">
+                            <article class="role-card fade_up">
+                                <div class="role-head">
+                                    <div>
+                                        <h3>Software Engineer / Team Lead</h3>
+                                        <p class="role-org">SMC Tech HRP – IT</p>
+                                    </div>
+                                    <p class="role-dates">Nov 2025 – Present</p>
+                                </div>
+                                <ul>
+                                    <li>Develop and maintain ASP.NET Core services and REST APIs for SMBP.</li>
+                                    <li>Lead feature development and coordinate technical delivery.</li>
+                                    <li>Design SQL Server solutions, including stored procedures for membership and payments.</li>
+                                    <li>Implement Stripe, Google Pay, and Apple Pay, plus Azure Blob Storage and SignalR.</li>
+                                    <li>Add Google, Apple, and LinkedIn sign-in.</li>
+                                    <li>Review code and improve the existing application structure.</li>
+                                    <li>Troubleshoot and resolve production issues.</li>
+                                </ul>
+                            </article>
+                            <article class="role-card fade_up">
+                                <div class="role-head">
+                                    <div>
+                                        <h3>Junior Software Developer</h3>
+                                        <p class="role-org">Sarhad University IT, Peshawar</p>
+                                    </div>
+                                    <p class="role-dates">Nov 2024 – Oct 2025</p>
+                                </div>
+                                <ul>
+                                    <li>Built University MIS modules for administration records and reporting.</li>
+                                    <li>Developed the Video Information System for video metadata, record maintenance, and reports.</li>
+                                    <li>Worked in ASP.NET against SQL Server on systems the university already runs.</li>
+                                </ul>
+                            </article>
+                            <article class="role-card fade_up">
+                                <div class="role-head">
+                                    <div>
+                                        <h3>Assistant Web Developer</h3>
+                                        <p class="role-org">Gandhara University – ORIC</p>
+                                    </div>
+                                    <p class="role-dates">Sep 2024 – Nov 2024</p>
+                                </div>
+                                <ul>
+                                    <li>Refactored database structure and queries on an existing system.</li>
+                                    <li>Reduced duplicated data-access work so later changes were easier to maintain.</li>
+                                </ul>
+                            </article>
+                        </div>
+                        <div class="earlier-roles fade_up">
+                            <h3>Earlier roles</h3>
+                            <ul>
+                                <li><strong>Web Developer</strong> · Xpert IT Solution · Apr 2024 – Sep 2024</li>
+                                <li><strong>Remote Software Developer</strong> · Tri Byte Solutions · Apr 2024 – Jun 2024</li>
+                                <li><strong>Junior Software Developer</strong> · Tri Byte Solutions · Mar 2023 – Mar 2024 · ASP.NET Core MVC and EF Core</li>
+                            </ul>
+                            <a href="#resume" class="hero-link">Education and certifications</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-three home-stack" id="skills">
+                    <div class="container-fluid site-width">
+                        <p class="about-kicker">Technology stack</p>
+                        <h2 class="creative brand fade_down">What I use in <span>production</span></h2>
+                        <p class="visionary section-lead">Only tools I can discuss in an interview. Versions and libraries follow the system I am working on.</p>
+                        <div class="skill-groups">
+                            <article class="skill-group fade_up">
+                                <h3>Backend</h3>
+                                <div class="skill-chips"><span>C#</span><span>ASP.NET Core</span><span>REST APIs</span><span>ASP.NET MVC</span><span>EF Core</span><span>Dapper</span></div>
+                            </article>
+                            <article class="skill-group fade_up">
+                                <h3>Database</h3>
+                                <div class="skill-chips"><span>SQL Server</span><span>T-SQL</span><span>Stored Procedures</span><span>Database Design</span><span>Query Optimization</span><span>MySQL</span></div>
+                            </article>
+                            <article class="skill-group fade_up">
+                                <h3>Frontend</h3>
+                                <div class="skill-chips"><span>React</span><span>TypeScript</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Bootstrap</span></div>
+                            </article>
+                            <article class="skill-group fade_up">
+                                <h3>Tools &amp; Integrations</h3>
+                                <div class="skill-chips"><span>Git</span><span>GitHub</span><span>Azure Blob Storage</span><span>SignalR</span><span>Stripe</span><span>Google Pay</span><span>Apple Pay</span><span>JWT</span></div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-three home-highlights" id="capabilities">
+                    <div class="container-fluid site-width">
+                        <p class="about-kicker">Capabilities</p>
+                        <h2 class="creative brand fade_down">How I <span>contribute</span></h2>
+                        <div class="row g-3 g-lg-4 highlight-grid">
+                            <div class="col-12 col-md-6">
+                                <article class="highlight-card fade_up h-100">
+                                    <h3>Backend Development</h3>
+                                    <p>Design and develop REST APIs and backend services using ASP.NET Core, C#, EF Core, and Dapper.</p>
+                                </article>
                             </div>
-                            <a href="contact.html" class="aryaBtn">Start a Project <img src="assets/images/svg/right-arrow.svg" alt="arrow"></a>
+                            <div class="col-12 col-md-6">
+                                <article class="highlight-card fade_up h-100">
+                                    <h3>Full-Stack Development</h3>
+                                    <p>Build complete features across ASP.NET Core APIs, React interfaces, authentication, and database layers.</p>
+                                </article>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <article class="highlight-card fade_up h-100">
+                                    <h3>Database &amp; Performance</h3>
+                                    <p>Design database structures, optimize queries, improve application performance, and maintain existing production systems.</p>
+                                </article>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <article class="highlight-card fade_up h-100">
+                                    <h3>Integrations</h3>
+                                    <p>Implement Stripe, Google Pay, and Apple Pay, Azure Blob Storage, SignalR, and Google, Apple, and LinkedIn sign-in.</p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-three home-architecture" id="architecture">
+                    <div class="container-fluid site-width">
+                        <p class="about-kicker">Architecture</p>
+                        <h2 class="creative brand fade_down">React to API to <span>database</span></h2>
+                        <p class="visionary section-lead">The shape I use on SMBP and EduPortal. Business rules stay out of controllers and out of the UI.</p>
+                        <div class="arch-layout">
+                            <ol class="arch-flow">
+                                <li><span>01</span><strong>React / MVC views</strong><p>Interfaces, forms, and role-based screens</p></li>
+                                <li><span>02</span><strong>ASP.NET Core Web API</strong><p>HTTP, validation, and authentication</p></li>
+                                <li><span>03</span><strong>Services</strong><p>Business rules for payments, membership, and records</p></li>
+                                <li><span>04</span><strong>Repository / data access</strong><p>One place for queries and commands</p></li>
+                                <li><span>05</span><strong>EF Core / Dapper</strong><p>Chosen per feature, not mixed at random</p></li>
+                                <li><span>06</span><strong>SQL Server</strong><p>Schema, stored procedures, and reports</p></li>
+                            </ol>
+                            <aside class="arch-aside">
+                                <h3>Around that core</h3>
+                                <ul class="skill-chips">
+                                    <li>Stripe, Google Pay, Apple Pay</li>
+                                    <li>Azure Blob Storage</li>
+                                    <li>SignalR</li>
+                                    <li>Google, Apple, and LinkedIn sign-in</li>
+                                </ul>
+                            </aside>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-three home-help" id="services">
+                    <div class="container-fluid site-width">
+                        <p class="about-kicker">What I can help with</p>
+                        <h2 class="creative brand fade_down">Work I take <span>on</span></h2>
+                        <div class="row g-3 g-lg-4 highlight-grid">
+                            <div class="col-12 col-md-6 col-lg-4"><article class="highlight-card fade_up h-100"><h3>ASP.NET Core Development</h3><p>REST APIs, authentication, business logic, and backend systems.</p></article></div>
+                            <div class="col-12 col-md-6 col-lg-4"><article class="highlight-card fade_up h-100"><h3>Database Development</h3><p>SQL Server, EF Core, Dapper, database design, and query optimization.</p></article></div>
+                            <div class="col-12 col-md-6 col-lg-4"><article class="highlight-card fade_up h-100"><h3>Full-Stack Development</h3><p>React applications on ASP.NET Core APIs, plus MVC views where the product is server-rendered.</p></article></div>
+                            <div class="col-12 col-md-6 col-lg-4"><article class="highlight-card fade_up h-100"><h3>Third-Party Integrations</h3><p>Stripe, Google Pay, Apple Pay, Azure Blob Storage, SignalR, and Google, Apple, and LinkedIn sign-in.</p></article></div>
+                            <div class="col-12 col-md-6 col-lg-4"><article class="highlight-card fade_up h-100"><h3>Application Maintenance</h3><p>Bug fixing, refactoring, performance work, and improvements to systems already in production.</p></article></div>
+                            <div class="col-12 col-md-6 col-lg-4"><article class="highlight-card fade_up h-100"><h3>Legacy Migration</h3><p>Move older ADO.NET data access onto Dapper or EF Core without a full rewrite.</p></article></div>
+                        </div>
+                        <h3 class="creative brand fade_down process-title">Delivery <span>process</span></h3>
+                        <div class="row g-3 g-lg-4 highlight-grid">
+                            <div class="col-12 col-md-6 col-lg-4"><article class="highlight-card fade_up h-100"><h3>01. Discovery</h3><p>Requirements, scope, and a technical plan tied to the business goal.</p></article></div>
+                            <div class="col-12 col-md-6 col-lg-4"><article class="highlight-card fade_up h-100"><h3>02. Development</h3><p>ASP.NET Core services, a clear data layer, and features reviewed before they ship.</p></article></div>
+                            <div class="col-12 col-md-6 col-lg-4"><article class="highlight-card fade_up h-100"><h3>03. Release</h3><p>Testing, production fixes, and a handover the next developer can extend.</p></article></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-three home-resume" id="resume">
+                    <div class="container-fluid site-width">
+                        <p class="about-kicker">Resume</p>
+                        <h2 class="creative brand fade_down">Education and <span>credentials</span></h2>
+                        <div class="download-btn resume-download">
+                            <a href="assets/pdf/SADEEQ_UR_RAHMAN_CV.pdf" class="aryaBtn" target="_blank" rel="noopener">Download CV <img src="assets/images/svg/download-svg.svg" alt=""></a>
+                        </div>
+                        <div class="row g-4 resume-sec-row">
+                            <div class="col-12 col-lg-6">
+                                <h3 class="resume-subhead">Education</h3>
+                                <div class="education fade_up"><div class="side_circle_ring"><div class="small_yellow_border"><div class="small_yellow_circle"></div></div></div><div class="small_yellow_border_main"><p class="bachelor">BS Software Engineering</p><p class="cursus university">City University of IT, Peshawar / 2019 - 2023</p><p class="description">CGPA: 3.01. Bachelor's studies in software engineering, programming, and software development.</p></div></div>
+                                <div class="education fade_up"><div class="side_circle_ring"><div class="small_yellow_border"><div class="small_yellow_circle"></div></div></div><div class="small_yellow_border_main"><p class="bachelor">FSc Pre-Engineering</p><p class="cursus university">P.E.F University College, Peshawar / 2017 - 2019</p><p class="description">Marks: 70.6%.</p></div></div>
+                                <div class="education fade_up"><div class="side_circle_ring"><div class="small_yellow_border"><div class="small_yellow_circle"></div></div></div><div class="small_yellow_border_main"><p class="bachelor">Matric (Science)</p><p class="cursus university">Al-Karim Public High School, Charsadda / Completed 2017</p><p class="description">Marks: 67.9%.</p></div></div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <h3 class="resume-subhead">Languages</h3>
+                                <div class="row g-3 highlight-grid">
+                                    <div class="col-12 col-md-4"><article class="highlight-card h-100"><h3>Pashto</h3><p>Native</p></article></div>
+                                    <div class="col-12 col-md-4"><article class="highlight-card h-100"><h3>Urdu</h3><p>Professional</p></article></div>
+                                    <div class="col-12 col-md-4"><article class="highlight-card h-100"><h3>English</h3><p>Conversational</p></article></div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="resume-subhead" id="more-work">More systems</h3>
+                        <div class="row g-3 g-lg-4 highlight-grid">
+                            <div class="col-12 col-md-6 col-xl-4"><article class="highlight-card fade_up h-100"><h3>University LMS</h3><p class="project-stack">ASP.NET Web Forms · SQL Server</p><p>Student assignments, semester records, grading, and academic reports.</p></article></div>
+                            <div class="col-12 col-md-6 col-xl-4"><article class="highlight-card fade_up h-100"><h3>Video Information System</h3><p class="project-stack">ASP.NET Web Forms · SQL Server</p><p>Video metadata, record maintenance, and reporting.</p></article></div>
+                            <div class="col-12 col-md-6 col-xl-4"><article class="highlight-card fade_up h-100"><h3>University MIS</h3><p class="project-stack">ASP.NET · SQL Server</p><p>University administration and reporting modules.</p></article></div>
+                            <div class="col-12 col-md-6 col-xl-4"><article class="highlight-card fade_up h-100"><h3>Mobile Accessories Warehouse</h3><p class="project-stack">ASP.NET Core MVC · SQL Server</p><p>Warehouse stock, suppliers, and reporting.</p></article></div>
+                            <div class="col-12 col-md-6 col-xl-4"><article class="highlight-card fade_up h-100"><h3>Mobile Accessories POS</h3><p class="project-stack">ASP.NET Core MVC · SQL Server</p><p>Point of sale, inventory, purchases, customers, and suppliers.</p></article></div>
+                            <div class="col-12 col-md-6 col-xl-4"><article class="highlight-card fade_up h-100"><h3>Rent A Car</h3><p class="project-stack">ASP.NET Core API · SQL Server</p><p>Vehicle booking and reservations for web and mobile.</p></article></div>
+                            <div class="col-12 col-md-6 col-xl-4"><article class="highlight-card fade_up h-100"><h3>Invoice Management</h3><p class="project-stack">ASP.NET Web Forms · SQL Server · iTextSharp</p><p>Invoice generation, PDF export, and customer billing.</p></article></div>
+                        </div>
+                        <h3 class="resume-subhead">Certifications</h3>
+                        <div class="row g-3 g-lg-4 cert-grid">
+                            <div class="col-12 col-md-6 col-xl-4"><article class="cert-card fade_up h-100"><div class="cert-card-top"><span class="cert-badge">A+</span><span class="cert-date">Dec 2024</span></div><h3 class="cert-title">Advanced Web Application Development</h3><p class="cert-issuer">NAVTTC | Prime Minister's Youth Skills Development Program</p><p class="cert-desc">Completed at Xpert IT Solution &amp; Training, Peshawar.</p></article></div>
+                            <div class="col-12 col-md-6 col-xl-4"><article class="cert-card fade_up h-100"><div class="cert-card-top"><span class="cert-badge">Certified</span><span class="cert-date">2024</span></div><h3 class="cert-title">HTML5 Application Development</h3><p class="cert-issuer">Certiport | Pearson VUE | CertNexus</p><p class="cert-desc">HTML5, web technologies, and modern web standards.</p></article></div>
+                            <div class="col-12 col-md-6 col-xl-4"><article class="cert-card fade_up h-100"><div class="cert-card-top"><span class="cert-badge">Specialization</span><span class="cert-date">Apr 2025</span></div><h3 class="cert-title">ASP.NET for Experienced Developers</h3><p class="cert-issuer">Board Infinity &amp; Coursera</p><p class="cert-desc">C#, ASP.NET Core, Web APIs, and microservices.</p></article></div>
+                            <div class="col-12 col-md-6 col-xl-4"><article class="cert-card fade_up h-100"><div class="cert-card-top"><span class="cert-badge">Course</span><span class="cert-date">Apr 2025</span></div><h3 class="cert-title">Backend Development using ASP.NET</h3><p class="cert-issuer">Board Infinity &amp; Coursera</p><p class="cert-desc">ASP.NET Core, Web APIs, database integration, and architecture.</p></article></div>
+                            <div class="col-12 col-md-6 col-xl-4"><article class="cert-card fade_up h-100"><div class="cert-card-top"><span class="cert-badge">Course</span><span class="cert-date">Apr 2025</span></div><h3 class="cert-title">Microservices &amp; Deployment with ASP.NET</h3><p class="cert-issuer">Board Infinity &amp; Coursera</p><p class="cert-desc">Microservices patterns and deployment with ASP.NET.</p></article></div>
+                            <div class="col-12 col-md-6 col-xl-4"><article class="cert-card fade_up h-100"><div class="cert-card-top"><span class="cert-badge">Course</span><span class="cert-date">Mar 2025</span></div><h3 class="cert-title">C# for .NET Developers</h3><p class="cert-issuer">Board Infinity &amp; Coursera</p><p class="cert-desc">C#, object-oriented programming, collections, and exception handling.</p></article></div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-nine home-contact" id="contact">
+                    <div class="container-fluid site-width">
+                        <div class="row g-4 g-xl-5 align-items-stretch">
+                            <div class="col-12 col-lg-5">
+                                <p class="about-kicker">Contact</p>
+                                <h2 class="creative brand fade_down">Have a project or opportunity? <span>Let's talk.</span></h2>
+                                <p class="visionary section-lead">Email, LinkedIn, GitHub, or the form. I reply within 24 hours.</p>
+                                <ul class="contact-channels">
+                                    <li><span>Email</span><a href="mailto:sadeequrrahman421@gmail.com">sadeequrrahman421@gmail.com</a></li>
+                                    <li><span>Phone</span><a href="tel:+923326123452">+92 332 6123452</a></li>
+                                    <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/sadeeq-ur-rahman-60663124a/" target="_blank" rel="noopener">sadeeq-ur-rahman</a></li>
+                                    <li><span>GitHub</span><a href="https://github.com/sadeequrrahma" target="_blank" rel="noopener">sadeequrrahma</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-12 col-lg-7">
+                                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                                    <input type="hidden" name="access_key" value="2d451af1-65cd-41c2-84c9-0e22c513a010">
+                                    <input type="checkbox" name="botcheck" class="contact-honeypot" tabindex="-1" autocomplete="off">
+                                    <div class="row g-4">
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-field">
+                                                <label class="form-label" for="homeName">Name</label>
+                                                <input id="homeName" type="text" class="form-control-custom" placeholder="Your name" name="YourName" autocomplete="name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <div class="form-field">
+                                                <label class="form-label" for="homeEmail">Email</label>
+                                                <input id="homeEmail" type="email" class="form-control-custom" placeholder="Your email" name="EmailID" autocomplete="email" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-field">
+                                                <label class="form-label" for="homeMessage">Message</label>
+                                                <textarea id="homeMessage" class="form-control-custom form-textarea" rows="5" placeholder="Role, project, or question" name="message" required></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="aryaBtn contact-submit-btn">Send Message <img src="assets/images/svg/right-arrow.svg" alt=""></button>
+                                        </div>
+                                    </div>
+                                    <p class="form-status" role="status"></p>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -208,13 +544,13 @@
             <footer class="full-width-footer site-footer">
                 <div class="container-fluid site-width">
                     <div class="row g-3 footer-top-grid">
-                        <div class="col-12 col-md-6 col-lg-3"><div class="footer-col"><div class="footer-brand"><img src="assets/images/svg/logo-icon.png" alt=""><div><h4>Sadeeq Ur Rahman</h4><p class="footer-role">Software Engineer</p></div></div><p>Software engineer building production web systems with ASP.NET Core and SQL Server.</p></div></div>
-                        <div class="col-12 col-md-6 col-lg-3"><div class="footer-col"><h5>Quick Links</h5><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="resume.html">Resume</a></li><li><a href="contact.html">Contact</a></li></ul></div></div>
+                        <div class="col-12 col-md-6 col-lg-3"><div class="footer-col"><div class="footer-brand"><img src="assets/images/svg/logo-icon.png" alt=""><div><h4>Sadeeq Ur Rahman</h4><p class="footer-role">Engineer / Team Lead</p></div></div><p>Software engineer and team lead. Production web systems with ASP.NET Core, React, and SQL Server.</p></div></div>
+                        <div class="col-12 col-md-6 col-lg-3"><div class="footer-col"><h5>Quick Links</h5><ul class="footer-links"><li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#work">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#services">Services</a></li><li><a href="#resume">Resume</a></li><li><a href="#contact">Contact</a></li></ul></div></div>
                         <div class="col-12 col-md-6 col-lg-3"><div class="footer-col"><h5>Core Skills</h5><ul class="footer-links"><li>ASP.NET Core</li><li>REST APIs</li><li>SQL Server</li><li>EF Core and Dapper</li></ul></div></div>
                         <div class="col-12 col-md-6 col-lg-3"><div class="footer-col"><h5>Contact</h5><p><a href="tel:+923326123452">+92 332 6123452</a></p><p><a href="mailto:sadeequrrahman421@gmail.com">sadeequrrahman421@gmail.com</a></p><p>Peshawar, Pakistan</p><div class="media-main"><a href="https://github.com/sadeequrrahma" class="media-icons" target="_blank" rel="noopener"><img src="assets/images/svg/github.svg" alt="GitHub"></a><a href="https://www.linkedin.com/in/sadeeq-ur-rahman-60663124a/" class="media-icons" target="_blank" rel="noopener"><img src="assets/images/svg/linkdin.svg" alt="LinkedIn"></a></div></div></div>
                     </div>
                     <div class="rights-reserved">
-                        <h2><a href="index.html">Sadeeq Ur Rahman | Software Engineer</a></h2>
+                        <h2><a href="#home">Sadeeq Ur Rahman | Software Engineer / Team Lead</a></h2>
                         <h2><a href="https://github.com/sadeequrrahma" target="_blank" rel="noopener">GitHub</a></h2>
                         <h2><a href="https://www.linkedin.com/in/sadeeq-ur-rahman-60663124a/" target="_blank" rel="noopener">LinkedIn</a></h2>
                     </div>

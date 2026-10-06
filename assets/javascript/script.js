@@ -103,6 +103,41 @@ $(document).ready(function () {
     }).observe($sideMenu[0], { attributes: true, attributeFilter: ['class'] });
 });
 
+function initSectionNav() {
+    const menuLinks = document.querySelectorAll('.desktop-nav a[href^="#"], .side-menu-ul a[href^="#"]');
+    const sections = [];
+    menuLinks.forEach(function (link) {
+        const section = document.querySelector(link.getAttribute('href'));
+        if (section && sections.indexOf(section) === -1) sections.push(section);
+    });
+
+    function setActive(id) {
+        menuLinks.forEach(function (link) {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+    }
+
+    function onScroll() {
+        const marker = window.scrollY + 220;
+        let current = sections[0];
+        sections.forEach(function (section) {
+            const top = section.getBoundingClientRect().top + window.scrollY;
+            if (top <= marker) current = section;
+        });
+        if (current) setActive(current.id);
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('hashchange', onScroll);
+    onScroll();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSectionNav);
+} else {
+    initSectionNav();
+}
+
 /*------------------------------------- Scroll counter -------------------------------------*/
 var counted = 0;
 function runAboutCounters() {

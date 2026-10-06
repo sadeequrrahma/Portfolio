@@ -200,7 +200,7 @@
     .download-btn {
         justify-content: center;
     }
-    .portfolio-girl-img-col {
+    .portrait-col {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -503,14 +503,14 @@
     }
 }
 @media (max-width: 575px) {
-    .girl-name {
+    .portrait-caption {
         position: absolute;
         left: 10px;
         bottom: 30px;
         padding: 7px 16px;
         height: 38px;
     }
-    .girl-name p {
+    .portrait-caption p {
         font-size: 16px;
     }
     .web-dev-text {
